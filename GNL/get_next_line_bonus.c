@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: megrisse <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: megrisse <megrisse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/01 09:42:47 by megrisse          #+#    #+#             */
-/*   Updated: 2022/01/05 02:15:57 by megrisse         ###   ########.fr       */
+/*   Updated: 2022/06/15 01:35:40 by megrisse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,17 +109,4 @@ char	*get_next_line(int fd)
 	line = ft_get_line(rest[fd]);
 	rest[fd] = ft_after_nl(rest[fd]);
 	return (line);
-}
-
-int main()
-{
-	int		fd;
-	char	*str;
-
-	fd = open("file", O_RDONLY);
-	while((str = get_next_line(fd)))
-	{
-
-		printf("%s",str);
-	}
 }
