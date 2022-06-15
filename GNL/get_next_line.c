@@ -110,17 +110,3 @@ char	*get_next_line(int fd)
 	rest = ft_after_nl(rest);
 	return (line);
 }
-
-
-int main()
-{
-	int		fd;
-	char	*str;
-
-	fd = open("file", O_RDONLY);
-	while((str = get_next_line(fd)))
-	{
-
-		printf("%s",str);
-	}
-}
